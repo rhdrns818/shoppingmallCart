@@ -45,17 +45,33 @@ cat.forEach((cat) => {
 //   });
 // }
 
-// '상속' 조언 받은 후 매우 짧아진 코드 and 작동 이상없음
+// 첫번째 조언 : '상속' 조언 받은 후 매우 짧아진 코드 and 작동 이상없음
+//               하지만 테두리만 눌렀을 때 이동해짐
+// const $section = document.querySelector("section");
+// $section.onclick = function(event){
+//   let target = event.target;
+//   if (target.className != "solid") return;
+//   $nav.append(target);
+// }
+
+// const $nav = document.querySelector(".findDiv");
+// $nav.onclick = function(event){
+//   let target = event.target;
+//   if (target.className != "solid") return;
+//   $section.append(target);
+// }
+
+// 두번째 조언 : closest를 이용하여 자식을 눌러도 부모태그 모두 이동하게 바꿈
 const $section = document.querySelector("section");
-$section.onclick = function(event){
-  let target = event.target;
+$section.onclick = function (event) {
+  let target = event.target.closest("div");
   if (target.className != "solid") return;
   $nav.append(target);
-}
+};
 
 const $nav = document.querySelector(".findDiv");
-$nav.onclick = function(event){
-  let target = event.target;
+$nav.onclick = function (event) {
+  let target = event.target.closest("div");
   if (target.className != "solid") return;
   $section.append(target);
-}
+};
