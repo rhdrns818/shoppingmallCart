@@ -1,0 +1,41 @@
+.root { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70vw;
+}
+.solid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid;
+}
+.num{
+  margin-right: 85%;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.img{
+  width: 16vw;
+  height: 16vh;
+}
+
+.name{
+  padding: 4px;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 20vw;
+  height: auto;
+  border: solid 3px ;
+}
+
+.cartName{
+  padding: 10px;
+}
